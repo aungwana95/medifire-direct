@@ -1,1 +1,1 @@
-https://aungwanakyimal.github.io/telegran-direct/
+https://aungwanakyimal.github.io/medifire-direct/
