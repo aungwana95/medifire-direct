@@ -125,7 +125,6 @@ var attemptDownloadRedirect = async function(url, dlBtn, invalidUrlP, invalidPag
   if (!containerNewUrl) containerNewUrl = document.getElementById('new-url');
   if (!spanMediafireNewUrl) spanMediafireNewUrl = document.getElementById('mediafire-new-url');
   if (!dlBtn) dlBtn = document.getElementById('mediafire-dl-btn');
-  if (!invalidUrlP) invalidUrlP = document.getElementById('invalid-url');
   if (!invalidPageP) invalidPageP = document.getElementById('invalid-page');
 
   // reset previous invalid page notice
@@ -196,9 +195,7 @@ window.addEventListener('load', function() {
   let containerNewUrl = document.getElementById('new-url');
   let spanMediafireNewUrl = document.getElementById('mediafire-new-url');
   let aMediafireDownloadBtn = document.getElementById('mediafire-dl-btn');
-  let pInvalidURL = document.getElementById('invalid-url');
-  let pInvalidPage = document.getElementById('invalid-page');
-    
+
   // Main
 
   // check URL parameters first
