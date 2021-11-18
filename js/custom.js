@@ -1,3 +1,20 @@
+// Constants
+
+/* Copyright (C) 2020  Andrew Larson (thealiendrew@gmail.com)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 const corsProxy = 'https://api.allorigins.win/get?url=';
 const validMediafireIdentifierDL = /^[a-zA-Z0-9]+$/m;
 const validMediafireShortDL = /^(https?:\/\/)?(www\.)?mediafire\.com\/\?[a-zA-Z0-9]+$/m;
@@ -108,6 +125,8 @@ var attemptDownloadRedirect = async function(url, dlBtn, invalidUrlP, invalidPag
   if (!containerNewUrl) containerNewUrl = document.getElementById('new-url');
   if (!spanMediafireNewUrl) spanMediafireNewUrl = document.getElementById('mediafire-new-url');
   if (!dlBtn) dlBtn = document.getElementById('mediafire-dl-btn');
+  if (!invalidUrlP) invalidUrlP = document.getElementById('invalid-url');
+  if (!invalidPageP) invalidPageP = document.getElementById('invalid-page');
 
   // reset previous invalid page notice
   if (!invalidPageP.classList.contains('hide')) invalidPageP.classList.add('hide');
@@ -177,7 +196,9 @@ window.addEventListener('load', function() {
   let containerNewUrl = document.getElementById('new-url');
   let spanMediafireNewUrl = document.getElementById('mediafire-new-url');
   let aMediafireDownloadBtn = document.getElementById('mediafire-dl-btn');
-
+  let pInvalidURL = document.getElementById('invalid-url');
+  let pInvalidPage = document.getElementById('invalid-page');
+    
   // Main
 
   // check URL parameters first
